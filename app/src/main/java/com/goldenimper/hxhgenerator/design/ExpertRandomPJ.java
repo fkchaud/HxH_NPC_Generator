@@ -17,7 +17,7 @@ public class ExpertRandomPJ {
         this.setup();
     }
     
-    public void setup(){
+    private void setup(){
         Stat fuerza = new Stat("Fuerza");
         Stat destreza = new Stat("Destreza");
         Stat inteligencia = new Stat("Inteligencia");
@@ -52,26 +52,16 @@ public class ExpertRandomPJ {
         pj.addAbility(new Ability("Supervivencia", inteligencia));
     }
     
-    public int dadoMedio(int caras){
+    private int dadoMedio(int caras){
         int a = dado(caras);
         int b = dado(caras);
         int c = dado(caras);
         int mid = Math.max(Math.min(a,b), Math.min(Math.max(a,b),c));
         return mid;
     }
-    public int dado(int caras){
+    private int dado(int caras){
         Random r = new Random();
         return r.nextInt(caras)+1;
-    }
-    
-    public DTOMessages iniciarCreación(){
-        DTOMessages dtoInicio = new DTOMessages(new ArrayList());
-        
-        dtoInicio.addMensaje("Bienvenido al sistema automatizado de creación de Personajes.");
-        dtoInicio.addMensaje("Usted podrá crear en muy pocos pasos un personaje aleatorio con algunos parámetros.");
-        dtoInicio.addMensaje("Uh sapaja la burocracia, man. Vamo por parte, ¿cuántos puntos le mandás a las habilidades?");
-        
-        return dtoInicio;
     }
     
     public DTOMessages indicarPuntos(int puntos) {
@@ -170,65 +160,10 @@ public class ExpertRandomPJ {
             pj.getAbilities().remove(habilidad);
             puntosHabilidadRestante -= puntos;
         } while (puntosHabilidadRestante > 0 && !pj.getAbilities().isEmpty());
-        
-        int sumaFuerza = 0;
-        int sumaDestreza = 0;
-        int sumaInteligencia = 0;
-        int sumaPercepcion = 0;
-        for (Ability habilidad : pj.getAbilitiesDone()) {
-            switch (habilidad.getStat().getNombre()) {
-                case "Fuerza":
-                    sumaFuerza += habilidad.getValor();
-                    break;
-                case "Destreza":
-                    sumaDestreza += habilidad.getValor();
-                    break;
-                case "Inteligencia":
-                    sumaInteligencia += habilidad.getValor();
-                    break;
-                case "Percepción":
-                    sumaPercepcion += habilidad.getValor();
-                    break;
-                default: break;
-            }
-        }
-        for (Stat stats : pj.getStats()) {
-            switch (stats.getNombre()) {
-                case "Fuerza":
-                    stats.setOrden(sumaFuerza);
-                    break;
-                case "Destreza":
-                    stats.setOrden(sumaDestreza);
-                    break;
-                case "Inteligencia":
-                    stats.setOrden(sumaInteligencia);
-                    break;
-                case "Percepción":
-                    stats.setOrden(sumaPercepcion);
-                    break;
-                default: break;
-            }
-        }
 
-        Collections.sort(pj.getStats(), new Comparator<Stat>() {
-            @Override
-            public int compare(Stat s1, Stat s2) {
-                return new Integer(s2.getOrden()).compareTo(s1.getOrden());
-            }
-        });
-
-        Integer [] puntosStats = {dadoMedio(10), dadoMedio(10), dadoMedio(10), dadoMedio(10)};
-        Arrays.sort(puntosStats, Collections.reverseOrder());
-        
-        for (int i=0; i < pj.getStats().size(); i++) {
-            pj.getStats().get(i).setValor(puntosStats[i]);
+        for (Stat st : pj.getStats()) {
+            st.setValor(dadoMedio(10));
         }
-        Collections.sort(pj.getStats(), new Comparator<Stat>() {
-            @Override
-            public int compare(Stat s1, Stat s2) {
-                return s1.getNombre().compareTo(s2.getNombre());
-            }
-        });
 
         dtoRandom.addMensaje("###############");
         dtoRandom.addMensaje("# Stats       #");
@@ -243,9 +178,17 @@ public class ExpertRandomPJ {
         for (Ability habilidad : pj.getAbilitiesDone()) {
             dtoRandom.addMensaje(habilidad.getNombre() + ": " + habilidad.getValor());
         }
-        
-        
-        
+
         return dtoRandom;
+    }
+
+    public ArrayList<DTOHabilidad> getHabilidades(){
+        ArrayList<DTOHabilidad> habilidades = new ArrayList<>();
+
+        for (Ability ab : pj.getAbilities()) {
+            habilidades.add(new DTOHabilidad(ab.getNombre(), ab.getStat().getNombre()));
+        }
+
+        return habilidades;
     }
 }

@@ -1,0 +1,7 @@
+#Sat Jun 24 21:33:52 ART 2017
+base.0=C\:\\Users\\Facundo\\AndroidStudioProjects\\HxHGenerator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\constraint-layout-solver-1.0.2_f0bb1cca3fb1ecc30ed05b294d6e554411373dee
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\Facundo\\AndroidStudioProjects\\HxHGenerator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_0e8388fcdaf4936e21c678e3aa1cbe77a3e10a41\\classes.dex
+base.1=C\:\\Users\\Facundo\\AndroidStudioProjects\\HxHGenerator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_0e8388fcdaf4936e21c678e3aa1cbe77a3e10a41
+file.0=C\:\\Users\\Facundo\\AndroidStudioProjects\\HxHGenerator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\constraint-layout-solver-1.0.2_f0bb1cca3fb1ecc30ed05b294d6e554411373dee\\classes.dex

@@ -465,10 +465,18 @@ containing a value of this type.
     public static final class id {
         public static final int all=0x7f070005;
         public static final int basic=0x7f070006;
+        public static final int calcularBTN=0x7f070010;
         public static final int chains=0x7f070007;
+        public static final int fatherLayout=0x7f070009;
+        public static final int nombreLayout=0x7f07000a;
+        public static final int nombrePJET=0x7f07000b;
         public static final int none=0x7f070008;
         public static final int packed=0x7f070003;
         public static final int parent=0x7f070000;
+        public static final int puntosHabilidadLayout=0x7f07000f;
+        public static final int puntosLabel=0x7f07000d;
+        public static final int puntosTotalLayout=0x7f07000c;
+        public static final int puntosTotalesET=0x7f07000e;
         public static final int spread=0x7f070001;
         public static final int spread_inside=0x7f070004;
         public static final int wrap=0x7f070002;

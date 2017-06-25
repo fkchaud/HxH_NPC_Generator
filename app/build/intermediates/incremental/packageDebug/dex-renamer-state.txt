@@ -1,0 +1,7 @@
+#Sun Jun 25 00:02:31 ART 2017
+base.0=C\:\\Users\\Facundo\\AndroidStudioProjects\\HxHGenerator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_f73b4b52a5e79fc8acbf365588045c1ff4487de9
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Facundo\\AndroidStudioProjects\\HxHGenerator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_4c89e4663d3ca486ee7834402c780eb5660ad433\\classes.dex
+base.1=C\:\\Users\\Facundo\\AndroidStudioProjects\\HxHGenerator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_4c89e4663d3ca486ee7834402c780eb5660ad433
+file.0=C\:\\Users\\Facundo\\AndroidStudioProjects\\HxHGenerator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_f73b4b52a5e79fc8acbf365588045c1ff4487de9\\classes.dex

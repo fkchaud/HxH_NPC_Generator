@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="output"><source path="C:\Users\Facundo\.android\build-cache\68f1331e0b1586da7d0db818eb2ad8941125fd82\output\assets"/></dataSet><dataSet config="main"><source path="C:\Users\Facundo\AndroidStudioProjects\HxHGenerator\app\src\main\assets"/><source path="C:\Users\Facundo\AndroidStudioProjects\HxHGenerator\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="C:\Users\Facundo\AndroidStudioProjects\HxHGenerator\app\src\debug\assets"/></dataSet></merger>
