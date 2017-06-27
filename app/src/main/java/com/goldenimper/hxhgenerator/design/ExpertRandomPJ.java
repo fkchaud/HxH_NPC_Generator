@@ -3,9 +3,6 @@ package com.goldenimper.hxhgenerator.design;
 import com.goldenimper.hxhgenerator.entity.*;
 import com.goldenimper.hxhgenerator.dto.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Random;
 
 public class ExpertRandomPJ {

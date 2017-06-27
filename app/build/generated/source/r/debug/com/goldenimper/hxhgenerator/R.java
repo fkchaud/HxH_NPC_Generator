@@ -465,7 +465,8 @@ containing a value of this type.
     public static final class id {
         public static final int all=0x7f070005;
         public static final int basic=0x7f070006;
-        public static final int calcularBTN=0x7f070010;
+        public static final int botonLayout=0x7f070010;
+        public static final int calcularBTN=0x7f070012;
         public static final int chains=0x7f070007;
         public static final int fatherLayout=0x7f070009;
         public static final int nombreLayout=0x7f07000a;
@@ -473,7 +474,8 @@ containing a value of this type.
         public static final int none=0x7f070008;
         public static final int packed=0x7f070003;
         public static final int parent=0x7f070000;
-        public static final int puntosHabilidadLayout=0x7f07000f;
+        public static final int puntosHabilidadLayout=0x7f070011;
+        public static final int puntosHabilidadScroll=0x7f07000f;
         public static final int puntosLabel=0x7f07000d;
         public static final int puntosTotalLayout=0x7f07000c;
         public static final int puntosTotalesET=0x7f07000e;

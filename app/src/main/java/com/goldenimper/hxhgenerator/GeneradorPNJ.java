@@ -2,8 +2,11 @@ package com.goldenimper.hxhgenerator;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.goldenimper.hxhgenerator.dto.*;
@@ -22,15 +25,16 @@ public class GeneradorPNJ extends Activity {
         setContentView(R.layout.activity_generador_pnj);
 
         habilidades = expertRandomPJ.getHabilidades();
-        LinearLayout layoutHabilidades = findViewById(R.id.puntosHabilidadLayout);
-        LinearLayout.LayoutParams paramsLL = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        TableLayout layoutHabilidades = findViewById(R.id.puntosHabilidadLayout);
+        TableLayout.LayoutParams paramsTL = new TableLayout.LayoutParams(
+                TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT);
+        TableRow.LayoutParams paramsTR = new TableRow.LayoutParams(
+                TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1);
 
         for (int i = 0; i < habilidades.size(); i++) {
 
-            LinearLayout abLay = new LinearLayout(this);
-            abLay.setOrientation(LinearLayout.HORIZONTAL);
-            abLay.setLayoutParams(paramsLL);
+            TableRow abLay = new TableRow(this);
+            abLay.setLayoutParams(paramsTR);
 
             //crearle un Label con la inicial del stat
             TextView inicial = new TextView(this);
@@ -49,7 +53,8 @@ public class GeneradorPNJ extends Activity {
             int id = basicIDHabilidades + i;
             habilidades.get(i).setIdView(id);
             puntosHabilidad.setId(id);
-            puntosHabilidad.setLayoutParams(paramsLL);
+            puntosHabilidad.setInputType(InputType.TYPE_CLASS_NUMBER);
+            puntosHabilidad.setLayoutParams(paramsTR);
             abLay.addView(puntosHabilidad);
 
             layoutHabilidades.addView(abLay);

@@ -47,7 +47,8 @@ int color colorPrimary 0x7f040001
 int color colorPrimaryDark 0x7f040002
 int id all 0x7f070005
 int id basic 0x7f070006
-int id calcularBTN 0x7f070010
+int id botonLayout 0x7f070010
+int id calcularBTN 0x7f070012
 int id chains 0x7f070007
 int id fatherLayout 0x7f070009
 int id nombreLayout 0x7f07000a
@@ -55,7 +56,8 @@ int id nombrePJET 0x7f07000b
 int id none 0x7f070008
 int id packed 0x7f070003
 int id parent 0x7f070000
-int id puntosHabilidadLayout 0x7f07000f
+int id puntosHabilidadLayout 0x7f070011
+int id puntosHabilidadScroll 0x7f07000f
 int id puntosLabel 0x7f07000d
 int id puntosTotalLayout 0x7f07000c
 int id puntosTotalesET 0x7f07000e
